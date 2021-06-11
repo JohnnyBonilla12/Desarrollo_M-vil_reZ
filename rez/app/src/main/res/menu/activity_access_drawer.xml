@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/fragment_Inicio"
+            android:icon="@drawable/inicio"
+            android:title="@string/menu_Inicio" />
+        <item
+            android:id="@+id/fragment_Mis_Recetas"
+            android:icon="@drawable/mis_recetas"
+            android:title="@string/menu_Recetas" />
+    </group>
+</menu>

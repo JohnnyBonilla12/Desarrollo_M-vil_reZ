@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">re-z</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="registrar">Registrar</string>
+    <string name="email">E-Mail</string>
+    <string name="password">Password</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="cancelar">Cancelar</string>
+
+    <string name="menu_Inicio">Inicio</string>
+    <string name="menu_Recetas">Mis Recetas</string>
+
+    <string name="action_agregar_receta">Agregar Receta</string>
+    <string name="action_settings">Configuraciones</string>
+
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="logut">Cerrar Sesión</string>
+
+    <string name="agregar_receta_Titulo">Agregar Receta</string>
+    <string name="agregar_receta_Imagen">Seleccionar Imagen</string>
+    <string name="agregar_receta_txtTitulo">Titulo</string>
+    <string name="agregar_receta_txtDificultad">Dificultad</string>
+    <string name="agregar_receta_txtPorciones">Porciones</string>
+    <string name="agregar_receta_txtDuracion">Duracion</string>
+    <string name="agregar_receta_txtIngredientes">Ingredientes</string>
+    <string name="agregar_receta_txtPreparacion">Preparacion</string>
+    <string name="agregar_receta_Subir">Subir</string>
+</resources>

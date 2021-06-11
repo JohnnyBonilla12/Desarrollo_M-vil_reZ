@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Recetas.Activity_Agregar">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="25dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="14dp"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <TextView
+                android:id="@+id/add_txtview1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:text="@string/agregar_receta_Titulo"
+                android:textColor="#546e7a"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/add_imagen"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:srcCompat="@drawable/no_image" />
+
+            <Button
+                android:id="@+id/add_btnSelect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/agregar_receta_Imagen"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/add_txtview2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:text="@string/agregar_receta_txtTitulo"
+                android:textColor="#546e7a" />
+
+            <EditText
+                android:id="@+id/add_titulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:inputType="text"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/add_txtview3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/agregar_receta_txtDificultad"
+                android:textColor="#546e7a" />
+
+            <EditText
+                android:id="@+id/add_dificultad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:inputType="number"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/add_txtview4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/agregar_receta_txtPorciones"
+                android:textColor="#546e7a" />
+
+            <EditText
+                android:id="@+id/add_porciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:inputType="number"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/add_txtview5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/agregar_receta_txtDuracion"
+                android:textColor="#546e7a" />
+
+            <EditText
+                android:id="@+id/add_duracion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:inputType="text"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/add_txtview6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/agregar_receta_txtIngredientes"
+                android:textColor="#546e7a" />
+
+            <EditText
+                android:id="@+id/add_ingredientes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:inputType="text"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/add_txtview7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/agregar_receta_txtPreparacion"
+                android:textColor="#546e7a" />
+
+            <EditText
+                android:id="@+id/add_preparacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:inputType="text"
+                android:padding="10dp" />
+
+            <Button
+                android:id="@+id/add_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/agregar_receta_Subir"
+                android:textColor="#fff" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Recetas.Activity_Detalles">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="14dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/detail_txtview0"
+                android:textSize="22sp"
+                android:layout_marginBottom="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Agregar"
+                android:textColor="#546e7a"/>
+
+            <ImageView
+                android:id="@+id/detail_imagen"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:srcCompat="@drawable/no_image" />
+
+            <TextView
+                android:id="@+id/detail_txtview1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ID"
+                android:textColor="#546e7a"/>
+
+            <TextView
+                android:id="@+id/detail_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/detail_txtview2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Titulo"
+                android:textColor="#546e7a"/>
+
+            <TextView
+                android:id="@+id/detail_titulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/detail_txtview3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dificultad"
+                android:textColor="#546e7a"/>
+
+            <TextView
+                android:id="@+id/detail_dificultad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/detail_txtview4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Porciones"
+                android:textColor="#546e7a"/>
+
+            <TextView
+                android:id="@+id/detail_porciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/detail_txtview5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Duración"
+                android:textColor="#546e7a"/>
+
+            <TextView
+                android:id="@+id/detail_duracion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/detail_txtview6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ingredientes"
+                android:textColor="#546e7a"/>
+
+            <TextView
+                android:id="@+id/detail_ingredientes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/detail_txtview7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Preparación"
+                android:textColor="#546e7a"/>
+
+            <TextView
+                android:id="@+id/detail_preparacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
