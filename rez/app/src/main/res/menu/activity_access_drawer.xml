@@ -12,5 +12,13 @@
             android:id="@+id/fragment_Mis_Recetas"
             android:icon="@drawable/mis_recetas"
             android:title="@string/menu_Recetas" />
+        <item
+            android:id="@+id/fragment_temporizador"
+
+            android:title="@string/temporizador" />
+        <item
+            android:id="@+id/fragment_favoritos"
+
+            android:title="@string/favoritos" />
     </group>
 </menu>

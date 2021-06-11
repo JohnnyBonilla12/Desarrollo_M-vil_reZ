@@ -16,4 +16,14 @@
         android:name="com.example.re_z.Fragments.Access.Fragment_Mis_Recetas"
         android:label="@string/menu_Recetas"
         tools:layout="@layout/access_fragment_mis_recetas" />
+    <fragment
+        android:id="@+id/fragment_temporizador"
+        android:name="com.example.re_z.Fragments.Access.Fragment_Temporizador"
+        android:label="Temporizador"
+        tools:layout="@layout/activity_temporizador" />
+    <fragment
+        android:id="@+id/fragment_favoritos"
+        android:name="com.example.re_z.Fragments.Access.Fragment_Favoritos"
+        android:label="Favoritos"
+        tools:layout="@layout/activity_favoritos" />
 </navigation>

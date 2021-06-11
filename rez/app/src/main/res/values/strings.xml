@@ -27,4 +27,6 @@
     <string name="agregar_receta_txtIngredientes">Ingredientes</string>
     <string name="agregar_receta_txtPreparacion">Preparacion</string>
     <string name="agregar_receta_Subir">Subir</string>
+    <string name="temporizador">Temporizador</string>
+    <string name="favoritos">Favoritos</string>
 </resources>

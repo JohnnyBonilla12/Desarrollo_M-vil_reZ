@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.re_z.Activities.Activity_Access;
+import com.example.re_z.Clases.AdapterFavoritos;
 import com.example.re_z.Clases.Configuration;
 import com.example.re_z.Clases.RequestHandler;
 import com.example.re_z.R;
