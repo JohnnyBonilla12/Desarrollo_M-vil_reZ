@@ -5,12 +5,15 @@ $user = "root";
 $pass = "";
 $db = "re-z";
 
-$con = mysqli_connect($host,$user,$pass, $db);
+error_reporting(E_ERROR | E_PARSE);
 
-// if($con){
-//   echo "Koneksi Berhasil";
-// }else{
-//   echo "gagal";
-// }
+//$con = mysqli_connect($host,$user,$pass, $db);
+$con = new mysqli($host, $user, $pass, $db);
 
+
+if ($con->connect_error) {
+    die(
+        "{data: error}"
+    );       
+}
  ?>

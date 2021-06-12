@@ -100,26 +100,30 @@ public class Fragment_Mis_Recetas extends Fragment implements SearchView.OnQuery
                 try{
                     progressDialog.hide();
                     JSONObject jsonObject = new JSONObject(response);
-                    JSONArray jsonArray = jsonObject.getJSONArray("data");
-                    for (int i = 0; i<jsonArray.length(); i++) {
-                        JSONObject o = jsonArray.getJSONObject(i);
-                        Receta receta = new Receta(
-                                o.getString("id"),
-                                o.getString("imagen"),
-                                o.getString("titulo"),
-                                o.getString("dificultad"),
-                                o.getString("porciones"),
-                                o.getString("duracion"),
-                                o.getString("ingredientes"),
-                                o.getString("preparacion"),
-                                o.getString("email")
-                        );
-                        lista_Recetas.add(receta);
-                    }
-                    adapter = new Adaptador_Mis_Recetas(lista_Recetas, getActivity());
-                    recyclerView.setAdapter(adapter);
-                    if(lista_Recetas.isEmpty()){
-                        Toast.makeText(getActivity(), "No has subido ninguna RECETA",Toast.LENGTH_SHORT).show();
+                    if(jsonObject.getString("data").equals("error")){
+                        Toast.makeText(getActivity(), "Error en el SERVIDOR {MYSQL}",Toast.LENGTH_SHORT).show();
+                    } else {
+                        JSONArray jsonArray = jsonObject.getJSONArray("data");
+                        for (int i = 0; i < jsonArray.length(); i++) {
+                            JSONObject o = jsonArray.getJSONObject(i);
+                            Receta receta = new Receta(
+                                    o.getString("id"),
+                                    o.getString("imagen"),
+                                    o.getString("titulo"),
+                                    o.getString("dificultad"),
+                                    o.getString("porciones"),
+                                    o.getString("duracion"),
+                                    o.getString("ingredientes"),
+                                    o.getString("preparacion"),
+                                    o.getString("email")
+                            );
+                            lista_Recetas.add(receta);
+                        }
+                        adapter = new Adaptador_Mis_Recetas(lista_Recetas, getActivity());
+                        recyclerView.setAdapter(adapter);
+                        if (lista_Recetas.isEmpty()) {
+                            Toast.makeText(getActivity(), "No has subido ninguna RECETA", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 }catch (JSONException e) {
                     e.printStackTrace();
