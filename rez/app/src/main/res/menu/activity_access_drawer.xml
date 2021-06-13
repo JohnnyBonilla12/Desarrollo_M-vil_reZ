@@ -5,6 +5,10 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/fragment_perfil"
+            android:icon="@drawable/ic_perfil"
+            android:title="Perfil" />
+        <item
             android:id="@+id/fragment_Inicio"
             android:icon="@drawable/inicio"
             android:title="@string/menu_Inicio" />
@@ -20,5 +24,9 @@
             android:id="@+id/fragment_favoritos"
             android:icon="@drawable/favorito"
             android:title="@string/favoritos" />
+        <item
+            android:id="@+id/fragment_Mis_Comentarios"
+            android:icon="@drawable/ic_comment"
+            android:title="Mis Comentarios" />
     </group>
 </menu>

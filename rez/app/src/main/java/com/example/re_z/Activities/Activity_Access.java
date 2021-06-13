@@ -38,8 +38,8 @@ public class Activity_Access extends AppCompatActivity {
         logout = findViewById(R.id.logout);
         cerrarSesion();
 
-        mAppBarConfiguration = new AppBarConfiguration.Builder (R.id.fragment_Inicio, R.id.fragment_Mis_Recetas,
-                R.id.fragment_temporizador,R.id.fragment_favoritos).setDrawerLayout(drawer).build();
+        mAppBarConfiguration = new AppBarConfiguration.Builder (R.id.fragment_perfil,R.id.fragment_Inicio, R.id.fragment_Mis_Recetas,
+                R.id.fragment_temporizador,R.id.fragment_favoritos,R.id.fragment_Mis_Comentarios).setDrawerLayout(drawer).build();
         NavController navController = Navigation.findNavController(this, R.id.access_nav);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
