@@ -54,7 +54,11 @@ private long timeLeftMiliseconds = 600000; //10 mins
             @Override
             public void onClick(View v) {
             timeLeftMiliseconds=timeLeftMiliseconds+10000;
-            startStop();
+           if(timeRunning){
+               stopTimer();
+               timeRunning=false;
+           }
+
             updateTimer();
 
             }

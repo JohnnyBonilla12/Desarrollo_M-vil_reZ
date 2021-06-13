@@ -19,5 +19,6 @@ public class Configuration {
     public static final String URL_DELETE_Favoritos=URL_FAVORITOS +"delete_favoritos.php";
     public static final String URL_SELECT_Favoritos=URL_FAVORITOS +"select_favoritos.php";
     public static final String URL_ADD_Favoritos=URL_FAVORITOS +"add_favoritos.php";
+    public static final String URL_VALIDATION_Favoritos=URL_FAVORITOS +"validacion_favoritos.php";
 
 }

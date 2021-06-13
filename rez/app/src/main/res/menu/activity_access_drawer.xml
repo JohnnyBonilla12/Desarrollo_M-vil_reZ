@@ -14,11 +14,11 @@
             android:title="@string/menu_Recetas" />
         <item
             android:id="@+id/fragment_temporizador"
-
+            android:icon="@drawable/temporizador"
             android:title="@string/temporizador" />
         <item
             android:id="@+id/fragment_favoritos"
-
+            android:icon="@drawable/favorito"
             android:title="@string/favoritos" />
     </group>
 </menu>

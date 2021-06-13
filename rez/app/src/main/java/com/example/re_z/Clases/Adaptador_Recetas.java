@@ -1,36 +1,67 @@
 package com.example.re_z.Clases;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Build;
+import android.os.CountDownTimer;
 import android.util.Base64;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
 import com.example.re_z.R;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class Adaptador_Recetas extends RecyclerView.Adapter<Adaptador_Recetas.ViewHolder> {
     private List<Receta> lista_Recetas;
     private List<Receta> original_Recetas;
     private Context contexto;
+    private Boolean validacion;
+
+
+    public interface VolleyCallback {
+        void setValid(boolean result);
+
+    }
+
+
+
 
     public Adaptador_Recetas(List<Receta> lista, Context contexto) {
         this.lista_Recetas = lista;
         this.contexto = contexto;
         this.original_Recetas = new ArrayList<>();
         this.original_Recetas.addAll(this.lista_Recetas);
+        this.validacion=false;
+
     }
 
     public void filter(final String search) {
@@ -61,6 +92,10 @@ public class Adaptador_Recetas extends RecyclerView.Adapter<Adaptador_Recetas.Vi
     public Adaptador_Recetas.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.access_cardview_receta, parent, false);
         return new Adaptador_Recetas.ViewHolder(v);
+
+
+
+
     }
 
     @Override
@@ -74,6 +109,95 @@ public class Adaptador_Recetas extends RecyclerView.Adapter<Adaptador_Recetas.Vi
         holder.titulo.setText("Nombre: " + receta.getTitulo());
         holder.dificultad.setText("Dificultad: " + receta.getDificultad());
         holder.duracion.setText("Duracion: " + receta.getDuracion());
+
+        //Mi modificación Empieza aqui
+        //Agregar receta a favoritos
+        holder.card_receta.setOnClickListener(new View.OnClickListener() {
+
+
+
+            @Override
+            public void onClick(final View v) {
+                            AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
+                            final ProgressDialog dialog = new ProgressDialog(v.getContext());
+                            dialog.setMessage("Cargando");
+                            final CharSequence[] dialogitem = {"Agregar a favoritos"};
+                            builder.setTitle(receta.getTitulo());
+                            builder.setItems(dialogitem, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+
+                                    //Agregar Favoritos
+                                    StringRequest stringRequest = new StringRequest(Request.Method.POST, Configuration.URL_ADD_Favoritos, new Response.Listener<String>() {
+                                        @Override
+                                        public void onResponse(String response) {
+
+                                            try {
+
+                                                JSONObject jsonObject = new JSONObject(response);
+                                                if(jsonObject.getString("success").equals("false")) {
+                                                    Toast.makeText(v.getContext(), "Ya se encuentra esta receta en favoritos", Toast.LENGTH_LONG).show();
+                                                }
+                                                if(jsonObject.getString("success").equals("true")) {
+                                                    Toast.makeText(v.getContext(), "Receta Agregada Exitosamente", Toast.LENGTH_LONG).show();
+                                                }
+
+                                                if(jsonObject.getString("success").equals("error")) {
+                                                    Toast.makeText(v.getContext(), "No se pudo agregar la receta", Toast.LENGTH_LONG).show();
+                                                }
+
+
+                                            } catch (JSONException e) {
+                                                e.printStackTrace();
+                                            }
+
+
+
+                                        }
+
+                                    }, new Response.ErrorListener() {
+                                        @Override
+                                        public void onErrorResponse(VolleyError error) {
+                                            Toast.makeText(v.getContext(), "Hubo un problema al agregar la receta a favoritos", Toast.LENGTH_LONG).show();
+                                        }
+                                    }) {
+                                        protected HashMap<String, String> getParams() throws AuthFailureError {
+                                            Map<String, String> params = new HashMap<>();
+                                            String id_receta = receta.getId();
+                                            //ID de la receta
+                                            params.put("id", id_receta);
+
+                                            //Conseguir correo de usuario desde adapter
+                                            Intent intent = ((Activity) v.getContext()).getIntent();
+                                            //Envio de correo
+                                            params.put("email", intent.getStringExtra("email"));
+
+                                            return (HashMap<String, String>) params;
+
+                                        }
+                                    }; //Fin de string Request
+                                    stringRequest.setShouldCache(false);
+                                    RequestHandler.getInstance(v.getContext()).addToRequestQueue(stringRequest);
+
+                                }//Fin de onclick Dialog
+
+
+                            });
+                            builder.create().show();
+
+
+
+
+
+            }
+
+
+        });
+
+        //Mi modificación  termina hasta aqui
+        
+        
+        
     }
 
     @Override
@@ -97,4 +221,7 @@ public class Adaptador_Recetas extends RecyclerView.Adapter<Adaptador_Recetas.Vi
             card_receta = (CardView) itemView.findViewById(R.id.card_view_receta);
         }
     }
+
+
+
 }

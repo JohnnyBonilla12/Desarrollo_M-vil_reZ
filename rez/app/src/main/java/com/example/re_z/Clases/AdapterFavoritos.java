@@ -103,7 +103,7 @@ public class AdapterFavoritos extends RecyclerView.Adapter<AdapterFavoritos.View
                 AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
                 final ProgressDialog dialog = new ProgressDialog(view.getContext());
                 dialog.setMessage("Loading Delete Data");
-                final CharSequence[] dialogitem = {"View Data","Delete Data"};
+                final CharSequence[] dialogitem = {"Ver Detalles","Eliminar de Favoritos"};
                 builder.setTitle(receta.getTitulo());
                 builder.setItems(dialogitem, new DialogInterface.OnClickListener() {
                     @Override
