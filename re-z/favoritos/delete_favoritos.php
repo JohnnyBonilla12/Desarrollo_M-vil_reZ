@@ -1,9 +1,10 @@
 <?php
-include 'connection.php';
+include '../connection.php';
 
 $id = $_POST['id'];
+$email = $_POST['email'];
 
-$query = mysqli_query($con, "DELETE FROM favoritos WHERE id_receta = '$id' ");
+$query = mysqli_query($con, "DELETE FROM favoritos WHERE id_receta = '$id' AND email ='$email' ");
 
 if($query){
   $response['success'] = 'true';
