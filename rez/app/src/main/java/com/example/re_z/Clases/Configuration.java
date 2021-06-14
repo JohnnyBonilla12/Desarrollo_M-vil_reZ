@@ -30,5 +30,7 @@ public class Configuration {
     //PHP usuarios
     public static final String URL_LOGIN = ROOT_URL+"login.php";
     public static final String URL_REGISTER = ROOT_URL+"registro.php";
+    public static final String URL_PERFIL = ROOT_URL+"usuario/";
+    public static final String URL_CONSULTA_PERFIL = URL_PERFIL+"consulta_perfil.php";
 
 }

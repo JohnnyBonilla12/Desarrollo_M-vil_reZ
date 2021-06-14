@@ -1,5 +1,6 @@
 package com.example.re_z.Fragments.Access;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.LayoutInflater;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.re_z.Activities.Activity_Main;
 import com.example.re_z.R;
 
 public class Fragment_Perfil extends Fragment {
@@ -24,6 +26,21 @@ public class Fragment_Perfil extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
     }
+
+    /*
+    public void eliminarPerfil(){
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(), Activity_Main.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                finish();
+                startActivity(intent);
+            }
+        });
+    }
+    */
 
 
 
