@@ -17,18 +17,18 @@ if ($query) {
 		$response["error"] = FALSE;
 		$response["email"] = $email;
 		echo json_encode($response);
-		//header('Location: menu.php');
-
-		# code...
 	}
 	else{
 		$response["error"] = TRUE;
 		echo "error de usuario o contraseña";
+		echo json_encode($response);
 	}
 	
 } else{
-	//echo "error:". $con->error;
+	$response["error"] = TRUE;
+	$response["message"] = $con->error;
+	echo json_encode($response);
 }
 
-//echo json_encode($response);
+
  ?>

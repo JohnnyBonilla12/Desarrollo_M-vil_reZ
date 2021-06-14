@@ -6,6 +6,12 @@
     app:startDestination="@id/fragment_Inicio">
 
     <fragment
+        android:id="@+id/fragment_perfil"
+        android:name="com.example.re_z.Fragments.Access.Fragment_Perfil"
+        android:label="Perfil"
+        tools:layout="@layout/access_fragment_perfil" />
+
+    <fragment
         android:id="@+id/fragment_Inicio"
         android:name="com.example.re_z.Fragments.Access.Fragment_Inicio"
         android:label="@string/menu_Inicio"
@@ -26,4 +32,9 @@
         android:name="com.example.re_z.Fragments.Access.Fragment_Favoritos"
         android:label="Favoritos"
         tools:layout="@layout/activity_favoritos" />
+    <fragment
+        android:id="@+id/fragment_Mis_Comentarios"
+        android:name="com.example.re_z.Fragments.Access.Fragment_Mis_Comentarios"
+        android:label="Mis Comentarios"
+        tools:layout="@layout/access_fragment_mis_comentarios" />
 </navigation>

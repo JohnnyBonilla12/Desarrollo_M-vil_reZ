@@ -29,4 +29,18 @@
     <string name="agregar_receta_Subir">Subir</string>
     <string name="temporizador">Temporizador</string>
     <string name="favoritos">Favoritos</string>
+
+    <string name="receta">Receta</string>
+    <string name="fecha">Fecha</string>
+    <string name="comentario">Comentario</string>
+    <string name="editComentario">Editar Comentario</string>
+    <string name="action_agregar_comentario">Agregar Comentario</string>
+
+    <string name="miPerfil">Mi Perfil</string>
+    <string name="usuario">Nombre de Usuario</string>
+    <string name="editar">Editar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="recetas">Recetas</string>
+    <string name="comentarios">Comentarios</string>
+    <string name="favoritosCount">Favoritos</string>
 </resources>
